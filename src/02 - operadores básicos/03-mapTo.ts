@@ -1,5 +1,5 @@
 import { fromEvent } from 'rxjs';
-import { map, mapTo } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 /**
  * mapTo() perimte transformar cualquier entrada en una salida específica
@@ -13,9 +13,10 @@ const keyupCode$ = keyup$.pipe(
 );
 
 const keyupMapTo$ = keyup$.pipe(
-    mapTo('tecla presionada')
-    // es lo mismo que map(x => 'hallo')
+    // mapTo()
+    // es lo mismo que 
+    map(x => 'hallo')
 );
 
 keyupCode$.subscribe(code => console.log('map', code));
-keyupMapTo$.subscribe(code => console.log('mapTo', code));
+keyupMapTo$.subscribe(code => console.log('pluckMapTo', code));
