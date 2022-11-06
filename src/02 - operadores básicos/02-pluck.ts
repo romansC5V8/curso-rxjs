@@ -2,8 +2,8 @@ import { fromEvent } from 'rxjs';
 import { map, pluck } from 'rxjs/operators';
 
 /**
- * Con pluck() se extrae un valor de un objeto y ese valor
- * pasa a ser la salida del observable
+ * pluck() se usa para extraer el valor de una propiedad específica de un objeto y
+ * ese valor es emitida por el observable
  * 
  * PLUCK ES @deprecated. DESDE RXJS v8 YA NO HAY "pluck()"
  */
